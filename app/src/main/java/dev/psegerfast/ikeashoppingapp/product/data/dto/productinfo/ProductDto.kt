@@ -1,11 +1,10 @@
 package dev.psegerfast.ikeashoppingapp.product.data.dto.productinfo
 
-import dev.psegerfast.ikeashoppingapp.product.data.ProductSerializer
 import dev.psegerfast.ikeashoppingapp.product.data.dto.MoneyDto
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-@Serializable(with = ProductSerializer::class)
+@Serializable
 sealed class ProductDto {
     abstract val id: Int
     abstract val name: String
