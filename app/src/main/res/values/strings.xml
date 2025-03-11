@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">IkeaShoppingApp</string>
+    <string name="error_disk_full">Ouch! It seems that you\'ve ran out of disk space.</string>
+    <string name="error_products_json_not_found">Couldn\'t find products.json</string>
+    <string name="error_unknown">An unknown error occurred.</string>
 </resources>
