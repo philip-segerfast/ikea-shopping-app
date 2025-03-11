@@ -1,17 +1,15 @@
 package dev.psegerfast.ikeashoppingapp.core.domain
 
 sealed interface DataError: Error {
-    enum class Remote: DataError {
-        REQUEST_TIMEOUT,
-        TOO_MANY_REQUESTS,
-        NO_INTERNET,
-        SERVER,
-        SERIALIZATION,
-        UNKNOWN
+
+    sealed interface IO : DataError {
+        data class Unknown(val error: Exception) : IO
+        data class FileNotFound(val error: Exception) : IO
     }
 
-    enum class Local: DataError {
-        DISK_FULL,
-        UNKNOWN
+    sealed interface Local : DataError {
+        data object DiskFull : Local
+        data class Unknown(val error: Exception) : Local
     }
+
 }
