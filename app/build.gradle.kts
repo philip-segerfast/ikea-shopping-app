@@ -59,6 +59,12 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     implementation(libs.sqlite.bundled)
     ksp(libs.androidx.room.compiler)
+    // koin
+    implementation(project.dependencies.platform(libs.koin.bom))
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    implementation(libs.koin.androidx.compose)
+
     // test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -67,4 +73,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    // koin
+    testImplementation(libs.koin.test)
+    testImplementation(libs.koin.junit4)
 }
