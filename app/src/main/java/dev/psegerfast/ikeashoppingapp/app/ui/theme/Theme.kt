@@ -1,4 +1,4 @@
-package dev.psegerfast.ikeashoppingapp.ui.theme
+package dev.psegerfast.ikeashoppingapp.app.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

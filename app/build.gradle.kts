@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId = "dev.psegerfast.ikeashoppingapp"
-        minSdk = 26
+        minSdk = 26 // Same as IKEA's app
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -55,10 +55,13 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     // non-default
+    implementation(libs.timber)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.androidx.room.runtime)
     implementation(libs.sqlite.bundled)
     ksp(libs.androidx.room.compiler)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
     // koin
     implementation(project.dependencies.platform(libs.koin.bom))
     implementation(libs.koin.core)

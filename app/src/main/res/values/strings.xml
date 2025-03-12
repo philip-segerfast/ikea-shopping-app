@@ -1,5 +1,28 @@
 <resources>
     <string name="app_name">IkeaShoppingApp</string>
+
+    <string name="cart">cart</string>
+    <string name="clear_cart">clear cart</string>
+    <string name="proceed_too_checkout">proceed to checkout</string>
+    <string name="add_to_cart">add to cart</string>
+    <string name="total">total</string>
+    <string name="couch">couch</string>
+    <string name="chair">chair</string>
+    <string name="to_be_continued">To be continued!</string>
+    <plurals name="seats">
+        <item quantity="one">seat</item>
+        <item quantity="other">seats</item>
+    </plurals>
+    <plurals name="items">
+        <item quantity="one">item</item>
+        <item quantity="other">items</item>
+    </plurals>
+    <string name="add">add</string>
+    <string name="remove">remove</string>
+    <string name="remove_all">remove all</string>
+    <string name="color">color</string>
+
+    <!-- Errors -->
     <string name="error_disk_full">Ouch! It seems that you\'ve ran out of disk space.</string>
     <string name="error_products_json_not_found">Couldn\'t find products.json</string>
     <string name="error_unknown">An unknown error occurred.</string>
