@@ -28,7 +28,7 @@ fun ProductPicture(
     product: Product,
     modifier: Modifier = Modifier,
 ) {
-    // I could probably also just have used AsyncImage for this
+    // I could probably also just have used AsyncImage for all this
 
     val fallbackUrl = when(product) {
         is Product.Chair -> "https://www.ikea.com/global/assets/range-categorisation/images/product/dining-chairs-25219.jpeg?imwidth=160"
