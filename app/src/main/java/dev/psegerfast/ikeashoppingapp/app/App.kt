@@ -26,9 +26,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.capitalize
@@ -52,7 +54,7 @@ import dev.psegerfast.ikeashoppingapp.product.presentation.product_list.ProductL
 import dev.psegerfast.ikeashoppingapp.product.presentation.product_list.components.ProductList
 import org.koin.androidx.compose.koinViewModel
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
 @Preview
 @Composable
 fun App() {
@@ -98,7 +100,6 @@ fun App() {
                     onAction = cartViewModel::onAction,
                 )
             },
-            modifier = Modifier,
             scaffoldState = bottomSheetStateScaffoldState,
             sheetPeekHeight = bottomSheetPeekHeight,
             sheetShape = MaterialTheme.shapes.extraLarge.copy(bottomStart = CornerSize(0.dp), bottomEnd = CornerSize(0.dp)),
@@ -139,6 +140,7 @@ fun BottomSheetDragHandle(
         modifier = Modifier
             .fillMaxWidth()
             .then(modifier)
+            .testTag("BottomSheetDragHandle")
             .onGloballyPositioned { layoutCoordinates ->
                 localDensity.run {
                     onHeightSet(layoutCoordinates.size.height.toDp())

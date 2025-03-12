@@ -19,12 +19,12 @@ class DefaultCartRepository(
     private val productRepository: ProductRepository,
     private val cartDao: CartDao,
 ) : CartRepository {
+
+    // Much of the logic in here should be moved to the use cases.
+
     override suspend fun addToCart(product: Product): EmptyResult<DataError.Local> = runCatchingDatabaseErrors {
         val productId = product.id
         val current = cartDao.getProduct(productId)
-            ?.also {
-                Timber.d("In database: $it")
-            }
             ?: CartProductEntity(productId, 0)
 
         val newValue = current.copy(quantity = current.quantity + 1)
