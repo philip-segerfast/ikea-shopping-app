@@ -62,6 +62,7 @@ dependencies {
     ksp(libs.androidx.room.compiler)
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
+    implementation(libs.kotlinx.collections.immutable)
     // koin
     implementation(project.dependencies.platform(libs.koin.bom))
     implementation(libs.koin.core)
@@ -76,6 +77,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    debugImplementation(libs.kotlinx.coroutines.test)
     // koin
     testImplementation(libs.koin.test)
     testImplementation(libs.koin.junit4)
