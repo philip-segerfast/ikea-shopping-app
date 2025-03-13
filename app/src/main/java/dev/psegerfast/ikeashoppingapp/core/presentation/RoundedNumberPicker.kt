@@ -20,11 +20,9 @@ fun RoundedNumberPicker(
     onDecrement: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val shape = RoundedCornerShape(100)
-    val density = LocalDensity.current
     Surface(
         modifier = modifier,
-        shape = shape,
+        shape = RoundedCornerShape(100),
         shadowElevation = 4.dp
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {

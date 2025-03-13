@@ -16,7 +16,7 @@ sealed interface DataError: Error {
 
 }
 
-suspend inline fun <T> runCatchingDatabaseErrors(block: suspend () -> T): Result<T, DataError.Local> {
+inline fun <T> runCatchingDatabaseErrors(block: () -> T): Result<T, DataError.Local> {
     return try {
         val result = block()
         Result.Success(result)

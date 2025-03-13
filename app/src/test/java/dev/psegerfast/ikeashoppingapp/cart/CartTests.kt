@@ -1,4 +1,4 @@
-package dev.psegerfast.ikeashoppingapp
+package dev.psegerfast.ikeashoppingapp.cart
 
 import dev.psegerfast.ikeashoppingapp.cart.data.repository.FakeCartRepository
 import dev.psegerfast.ikeashoppingapp.cart.domain.ProductBundle

@@ -19,10 +19,6 @@ import dev.psegerfast.ikeashoppingapp.product.data.repository.DefaultProductRepo
 import dev.psegerfast.ikeashoppingapp.product.domain.ProductRepository
 import dev.psegerfast.ikeashoppingapp.product.domain.use_case.GetProductsUseCase
 import dev.psegerfast.ikeashoppingapp.product.presentation.product_list.ProductListViewModel
-import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.newSingleThreadContext
 import kotlinx.serialization.json.Json
 import org.koin.core.module.Module
 import org.koin.core.module.dsl.singleOf
@@ -30,7 +26,6 @@ import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.bind
 import org.koin.dsl.module
 
-@OptIn(DelicateCoroutinesApi::class, ExperimentalCoroutinesApi::class)
 val appModule = module {
     single<Json> {
         Json {
